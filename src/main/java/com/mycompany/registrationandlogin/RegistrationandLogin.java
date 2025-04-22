@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author Adhir
  */
-public class RegistrationandLogin {
+public class RegistrationandLogin { 
 
     private final String username;
     private final String password;
@@ -38,7 +38,7 @@ public class RegistrationandLogin {
     }
 
     public boolean checkCellPhoneNumber() {
-        return cellNumber.matches("^\\+27\\d{9}$");
+        return cellNumber.matches("^\\+27\\d{9}$"); //regex used
     }
 
     public String registerUser() {
@@ -80,7 +80,7 @@ public class RegistrationandLogin {
         String lastName = JOptionPane.showInputDialog("Enter your Last Name:");
         String username = JOptionPane.showInputDialog("Enter your Username:");
         String password = JOptionPane.showInputDialog("Enter your Password:");
-        String phone = JOptionPane.showInputDialog("Enter your Cell Number (e.g., +27XXXXXXXX):");
+        String phone = JOptionPane.showInputDialog("Enter your Cell Number (e.g., +27XXXXXXXX):"); //added example to show how cellnumber must be formatted
 
         RegistrationandLogin user = new RegistrationandLogin(username, password, phone, firstName, lastName);
         String regMsg = user.registerUser();
@@ -91,7 +91,7 @@ public class RegistrationandLogin {
             
             String loginUser = JOptionPane.showInputDialog("Login - Enter Username:");
             String loginPass = JOptionPane.showInputDialog("Login - Enter Password:");
-            JOptionPane.showMessageDialog(null, "Verifying,please wait...");
+            JOptionPane.showMessageDialog(null, "Verifying,please wait..."); //simulates loading 
             Thread.sleep(2000);
 
             boolean success = user.loginUser(loginUser, loginPass);
