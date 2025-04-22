@@ -43,12 +43,14 @@ public class RegistrationandLogin {
 
     public String registerUser() {
         if (!checkUserName()) {
-            return "Username is not correctly formatted, please ensure that your username contains an underscore and is no more than five characters in length.";
+            return "Username is not correctly formatted, please ensure that your username contains an underscore "
+                    + "and is no more than five characters in length.";
         } else {
            JOptionPane.showMessageDialog(null,"Username successfully captured.");
         }
         if (!checkPasswordComplexity()) {
-            return "Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number and a special character.";
+            return "Password is not correctly formatted; please ensure that the password contains at least eight characters, "
+                    + "a capital letter, a number and a special character.";
         } else {
             JOptionPane.showMessageDialog(null, "Password successfully captured.");
         }
